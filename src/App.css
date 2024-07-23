@@ -1,38 +1,213 @@
-.App {
-  text-align: center;
+label {
+  display: inline-block;
+  margin-right: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+select {
+  margin-right: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="file"] {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  margin-right: 10px;
+}
+
+.formRow {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 20px;
+}
+
+.formRow label {
+  margin-right: 10px;
+}
+
+.searchButton {
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.searchButton:hover {
+  background-color: #002244;
+}
+
+.deleteButton {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-left: -1600px;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: red;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.leaderboardWrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.leaderboardContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end; /* Align items at the bottom to lift the middle item */
+  margin-top: 20px;
+  position: relative;
+  /* flex-wrap: wrap; Allow wrapping for view all */
+}
+
+.leaderboardItem {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 20%;
+  text-align: center;
+  background: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-bottom: 20px; /* Add space at the bottom */
+  font-size: 12px;
+}
+
+.topOne {
+  position: absolute;
+  top: -20px; /* Adjust this value to raise the item */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%; /* Adjust width if needed */
+  z-index: 1;
+  
+}
+
+.rank {
+  font-size: 1.2em; /* Adjust font size */
+  margin-bottom: 10px;
+  background: #003366;
+  color: white;
+  width: 50px; /* Adjust width */
+  height: 50px; /* Adjust height */
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.imageContainer {
+  margin-bottom: 20px;
+}
+
+.imageContainer img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.territory, .name, .revenue, .teamNumber {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.revenueLeaderBoard {
+  text-align: center;
+  padding: 10px;
+}
+
+.fullLeaderboardContainer {
+  margin-top: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.fullLeaderboard table {
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
+.fullLeaderboard th, .fullLeaderboard td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  text-align: center;
+}
+
+.fullLeaderboard th {
+  background-color: #003366;
+  color: white;
+}
+
+.fullLeaderboard th:nth-child(4) { /* Select the "Total Revenue" column */
+  width: 200px; /* Increase the width */
+}
+
+.fullLeaderboard td img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.fullLeaderboard tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #002244;
+}
+
+.viewAllButton {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.viewAllButton:hover {
+  background-color: #002244;
+}
+
+.filterContainer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.filterContainer label {
+  margin-right: 10px;
 }
